@@ -11,18 +11,19 @@ import UIKit
 
 class ViewController: UIViewController {
         
-        @IBOutlet weak var subTotalTextField: UITextField!
-        @IBOutlet weak var tipAmountTextField: UITextField!
-        @IBOutlet weak var totalAmountTextField: UITextField!
+    @IBOutlet weak var subTotalTextField: UITextField!
+    @IBOutlet weak var tipAmountTextField: UITextField!
+    @IBOutlet weak var totalAmountTextField: UITextField!
         
-        @IBOutlet weak var tip15Button: UIButton!
-        @IBOutlet weak var tip18Button: UIButton!
-        @IBOutlet weak var tip20Button: UIButton!
-        @IBOutlet weak var customTipButton: UIButton!
-        @IBOutlet weak var resetButton: UIButton!
-        @IBOutlet weak var calculateButton: UIButton!
-        
-        var tipPercentage: Double = 0.0
+    @IBOutlet weak var tip15Button: UIButton!
+    @IBOutlet weak var tip18Button: UIButton!
+    @IBOutlet weak var tip20Button: UIButton!
+    @IBOutlet weak var customTipButton: UIButton!
+    @IBOutlet weak var resetButton: UIButton!
+    @IBOutlet weak var calculateButton: UIButton!
+    @IBOutlet weak var customTipText: UITextField!
+    
+    var tipPercentage: Double = 0.0
 
         override func viewDidLoad() {
             super.viewDidLoad()
@@ -45,7 +46,7 @@ class ViewController: UIViewController {
         }
         
         @IBAction func customTipButtonPressed(_ sender: UIButton) {
-            if let customTipText = subTotalTextField.text, let customTip = Double(customTipText) {
+            if let customTipText = customTipText.text, let customTip = Double(customTipText) {
                 tipPercentage = customTip / 100
                 updateTipAmount()
             }
