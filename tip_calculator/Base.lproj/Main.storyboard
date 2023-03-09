@@ -25,7 +25,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b6W-y0-Xy0">
-                                <rect key="frame" x="11" y="191" width="370" height="263"/>
+                                <rect key="frame" x="11" y="151" width="370" height="263"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZOv-Ar-gco">
@@ -54,6 +54,10 @@
                                         <color key="tintColor" systemColor="systemTealColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="18%"/>
+                                        <connections>
+                                            <action selector="eight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TZd-oQ-vYN"/>
+                                            <action selector="tip18ButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HcH-K0-Aof"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GQS-Z6-HfO">
                                         <rect key="frame" x="213" y="178" width="60" height="35"/>
@@ -61,6 +65,10 @@
                                         <color key="tintColor" systemColor="systemTealColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="20%"/>
+                                        <connections>
+                                            <action selector="tip20ButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WMA-Q6-l5q"/>
+                                            <action selector="twenty:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OGH-Ja-6Ht"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IFq-vY-X12">
                                         <rect key="frame" x="273" y="178" width="84" height="35"/>
@@ -68,6 +76,10 @@
                                         <color key="tintColor" systemColor="systemTealColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Custom"/>
+                                        <connections>
+                                            <action selector="custom:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N52-Lz-aM8"/>
+                                            <action selector="customTipButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YX3-Rc-62O"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G9G-We-ai2">
                                         <rect key="frame" x="100" y="178" width="57" height="35"/>
@@ -75,13 +87,17 @@
                                         <color key="tintColor" systemColor="systemTealColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="15%"/>
+                                        <connections>
+                                            <action selector="fifteen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aIa-jj-9fh"/>
+                                            <action selector="tip15ButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VcI-8x-UeC"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemMintColor"/>
                                 <color key="tintColor" name="AccentColor"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uvl-MI-inU">
-                                <rect key="frame" x="47" y="462" width="294" height="258"/>
+                                <rect key="frame" x="47" y="422" width="294" height="258"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tip Amount:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3O9-NE-Hpz">
@@ -109,29 +125,58 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="Total:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="b6K-fd-Xhg"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemCyanColor"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d6i-1y-ofG">
-                                <rect key="frame" x="160" y="737" width="68" height="35"/>
+                                <rect key="frame" x="160" y="717" width="68" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.48581475019999998" green="0.65859299900000001" blue="0.90277391669999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Reset"/>
+                                <connections>
+                                    <action selector="reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K0O-Lx-Mb5"/>
+                                    <action selector="resetButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6nj-BZ-uS0"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zit-1q-iL3">
-                                <rect key="frame" x="147" y="783" width="95" height="35"/>
+                                <rect key="frame" x="147" y="763" width="95" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.48574711099114154" green="0.65908673901615955" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Calculate"/>
+                                <connections>
+                                    <action selector="calculate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nKT-gr-wun"/>
+                                    <action selector="calculateButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="53H-e0-E9b"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="Eight" destination="t2H-Hz-7Ue" id="cXi-8G-pdo"/>
+                        <outlet property="calculateButton" destination="Zit-1q-iL3" id="7EM-aE-oVZ"/>
+                        <outlet property="custom" destination="IFq-vY-X12" id="pag-RH-4a1"/>
+                        <outlet property="customTipButton" destination="IFq-vY-X12" id="HDb-vv-uUU"/>
+                        <outlet property="fifteen" destination="G9G-We-ai2" id="eyt-gY-NyV"/>
+                        <outlet property="resetButton" destination="d6i-1y-ofG" id="j8T-mo-mrN"/>
+                        <outlet property="subTotalTextField" destination="ZOv-Ar-gco" id="3h9-yF-HxX"/>
+                        <outlet property="subtot" destination="ZOv-Ar-gco" id="cCi-2L-L7Y"/>
+                        <outlet property="tip15Button" destination="G9G-We-ai2" id="q9w-o7-2hr"/>
+                        <outlet property="tip18Button" destination="t2H-Hz-7Ue" id="qC5-iy-5bZ"/>
+                        <outlet property="tip20Button" destination="GQS-Z6-HfO" id="jfc-RF-YUm"/>
+                        <outlet property="tipAmount" destination="yv4-1g-q9V" id="oYP-yw-VXt"/>
+                        <outlet property="tipAmountTextField" destination="yv4-1g-q9V" id="jVR-43-qbT"/>
+                        <outlet property="total" destination="tup-ca-vS6" id="Wvb-i9-acB"/>
+                        <outlet property="totalAmountTextField" destination="tup-ca-vS6" id="7EC-X9-ZMa"/>
+                        <outlet property="twenty" destination="GQS-Z6-HfO" id="Xlp-c8-7iy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
