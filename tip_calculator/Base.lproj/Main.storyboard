@@ -55,7 +55,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="18%"/>
                                         <connections>
-                                            <action selector="tip18ButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HcH-K0-Aof"/>
+                                            <action selector="tip18ButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Ry-CR-7km"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GQS-Z6-HfO">
@@ -65,7 +65,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="20%"/>
                                         <connections>
-                                            <action selector="tip20ButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WMA-Q6-l5q"/>
+                                            <action selector="tip20ButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OvP-hr-ca7"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IFq-vY-X12">
@@ -75,7 +75,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Custom"/>
                                         <connections>
-                                            <action selector="customTipButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YX3-Rc-62O"/>
+                                            <action selector="customTipButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bVY-1w-XjB"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G9G-We-ai2">
@@ -85,7 +85,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="15%"/>
                                         <connections>
-                                            <action selector="tip15ButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VcI-8x-UeC"/>
+                                            <action selector="tip15ButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dc9-7z-5H0"/>
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LFo-fa-Eyr">
@@ -94,6 +94,13 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="jE9-mu-QSr">
+                                        <rect key="frame" x="230" y="121" width="94" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="stepperAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="6tb-FS-nos"/>
+                                        </connections>
+                                    </stepper>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemMintColor"/>
                                 <color key="tintColor" name="AccentColor"/>
@@ -139,7 +146,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Reset"/>
                                 <connections>
-                                    <action selector="resetButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6nj-BZ-uS0"/>
+                                    <action selector="resetButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Gn-Se-ski"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zit-1q-iL3">
@@ -149,7 +156,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Calculate"/>
                                 <connections>
-                                    <action selector="calculateButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="53H-e0-E9b"/>
+                                    <action selector="calculateButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PkT-pZ-Jvp"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -157,16 +164,17 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="calculateButton" destination="Zit-1q-iL3" id="7EM-aE-oVZ"/>
-                        <outlet property="customTipButton" destination="IFq-vY-X12" id="HDb-vv-uUU"/>
-                        <outlet property="customTipText" destination="LFo-fa-Eyr" id="5PC-I0-wOm"/>
-                        <outlet property="resetButton" destination="d6i-1y-ofG" id="j8T-mo-mrN"/>
-                        <outlet property="subTotalTextField" destination="ZOv-Ar-gco" id="3h9-yF-HxX"/>
-                        <outlet property="tip15Button" destination="G9G-We-ai2" id="q9w-o7-2hr"/>
-                        <outlet property="tip18Button" destination="t2H-Hz-7Ue" id="qC5-iy-5bZ"/>
-                        <outlet property="tip20Button" destination="GQS-Z6-HfO" id="Inn-Qe-pmm"/>
-                        <outlet property="tipAmountTextField" destination="yv4-1g-q9V" id="jVR-43-qbT"/>
-                        <outlet property="totalAmountTextField" destination="tup-ca-vS6" id="7EC-X9-ZMa"/>
+                        <outlet property="calculateButton" destination="Zit-1q-iL3" id="DRa-3W-eld"/>
+                        <outlet property="customTipButton" destination="IFq-vY-X12" id="lpY-l0-XfA"/>
+                        <outlet property="customTipText" destination="LFo-fa-Eyr" id="EAB-k6-hH0"/>
+                        <outlet property="resetButton" destination="d6i-1y-ofG" id="2D4-j6-Qbh"/>
+                        <outlet property="stepper" destination="jE9-mu-QSr" id="0kJ-Mr-3Xe"/>
+                        <outlet property="subTotalTextField" destination="ZOv-Ar-gco" id="j7x-9z-S1f"/>
+                        <outlet property="tip15Button" destination="G9G-We-ai2" id="gRw-Ek-FzW"/>
+                        <outlet property="tip18Button" destination="t2H-Hz-7Ue" id="0KW-93-cNp"/>
+                        <outlet property="tip20Button" destination="GQS-Z6-HfO" id="Sec-6O-nyt"/>
+                        <outlet property="tipAmountTextField" destination="yv4-1g-q9V" id="UhD-2B-CE7"/>
+                        <outlet property="totalAmountTextField" destination="tup-ca-vS6" id="kez-Im-tM1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
